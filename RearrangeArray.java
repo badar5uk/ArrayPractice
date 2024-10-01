@@ -9,7 +9,7 @@ public class RearrangeArray {
              - if equal to 4 then move it next to the 3
      */
     public static void main(String[]args){
-        int[] arrayOfIntegers = {1, 5, 6, 3, 20 , 5, 4, 3, 4};
+        int[] arrayOfIntegers = {1, 3, 4, 3, 20 , 5, 4, 3, 4};
         int store = 0;
 
         for(int i = 0; i<arrayOfIntegers.length; i++){
