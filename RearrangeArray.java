@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class RearrangeArray {
@@ -9,20 +10,30 @@ public class RearrangeArray {
              - if equal to 4 then move it next to the 3
      */
     public static void main(String[]args){
-        int[] arrayOfIntegers = {1, 3, 4, 3, 20 , 5, 4, 3, 4};
+         ArrayList<Integer> arrayOfIntegers = new ArrayList<>();
+         arrayOfIntegers.add(1);
+         arrayOfIntegers.add(3);
+         arrayOfIntegers.add(4);
+         arrayOfIntegers.add(3);
+         arrayOfIntegers.add(20);
+         arrayOfIntegers.add(5);
+         arrayOfIntegers.add(4);
+         arrayOfIntegers.add(3);
+         arrayOfIntegers.add(4);
+                // {1, 3, 4, 3, 20 , 5, 4, 3, 4};
         int store = 0;
 
-        for(int i = 0; i<arrayOfIntegers.length; i++){
-            if(arrayOfIntegers[i]==3){
+        for(int i = 0; i<arrayOfIntegers.indexOf(i); i++){
+            if(arrayOfIntegers.get(i) ==3){
                 int j;
                 j=i+1;
-                while (arrayOfIntegers[j] != 4){
+                while (arrayOfIntegers.get(j) != 4){
                     j++;
                 }
-                store = arrayOfIntegers[i+1];
-                arrayOfIntegers[i+1]=4;
-                arrayOfIntegers[j] = store;
+                store = arrayOfIntegers.get(i + 1);
+                arrayOfIntegers.set(i + 1, 4);
+                arrayOfIntegers.set(j, store);
             }
-        }       System.out.println(Arrays.toString(arrayOfIntegers));
+        }       System.out.println(arrayOfIntegers);
     }
 }
