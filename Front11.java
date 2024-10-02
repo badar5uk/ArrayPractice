@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Front11 {
 
@@ -11,23 +13,23 @@ public class Front11 {
 
 
     public static void main(String[] args) {
-        int[] array1 = {2, 5, 6};
-        int[] array2 = {10, 13, 70};
+        List<Integer> array1 = Arrays.asList(4,5,6);
+        List<Integer> array2 = Arrays.asList(10,13,70);
 
-        if (array1.length == 0 && array2.length == 0) {
+        if (array1.size() == 0 && array2.size() == 0) {
             System.out.println("Both Arrays are empty");
             System.exit(0);
         }
-        else if(array1.length == 0) {
-            int[] newArray = {array2[0]};
+        else if(array1.size() == 0) {
+            int[] newArray = {array2.get(0)};
             System.out.println(newArray[0]);
         }
-        else if(array2.length == 0) {
-            int[] newArray = {array1[0]};
+        else if(array2.size() == 0) {
+            int[] newArray = {array1.get(0)};
             System.out.println(newArray[0]);
         }
         else {
-            int[] newArray = {array1[0] , array2[0]};
+            int[] newArray = {array1.get(0), array2.get(0)};
             System.out.println(newArray[0] +", "+ newArray[1] );
         }
     }
