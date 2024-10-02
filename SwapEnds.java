@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.List;
 
 public class SwapEnds {
     /*
@@ -9,11 +10,16 @@ public class SwapEnds {
      */
 
     public static void main(String[] args){
-        int[] originalArray = {1,2,3,4,5};
-        int firstElementOfArray = originalArray[0];
-         originalArray[0]=originalArray[originalArray.length-1];
-         originalArray[originalArray.length-1] = firstElementOfArray;
-        System.out.println(Arrays.toString(originalArray));
+        List<Integer> originalArray = Arrays.asList(1,2,3,4,5);
+
+        Integer firstElementOfArray = originalArray.getFirst();
+        originalArray.set(0, originalArray.get(originalArray.size()-1));
+        originalArray.set(originalArray.size()-1,firstElementOfArray);
+
+
+        System.out.println(originalArray);
+
+
         }
 
     }
